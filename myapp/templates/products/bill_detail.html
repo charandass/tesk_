@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Detail</title>
+</head>
+<body>
+    <h1>Bill Detail</h1>
+    <a href="/create_bill" style="border:2px sold black; padding:5px;">Create Bill</a>
+    <a href="/" style="border:2px sold black; padding:5px;">Item List</a>
+    <u>
+        {% for item in bill.items.all %}
+            <li>{{item.name}} - {{item.price }}</li>
+        {% endfor %}
+    </u>
+    <p>Total: {{ bill.total_price }}</p>
+</body>
+</html>
